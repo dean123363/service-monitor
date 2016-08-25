@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/51idc/service-monitor/nginx-monitor/g"
+	"github.com/dean123363/service-monitor/nginx-monitor/g"
 	"github.com/open-falcon/common/model"
 	"github.com/toolkits/file"
 )
