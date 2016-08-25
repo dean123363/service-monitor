@@ -134,7 +134,7 @@ func NginxMetrics() (L []*model.MetricValue) {
 	if err != nil {
 		log.Println(err)
 	} else {
-		L = append(L, GaugeValue("Nginx.Uptime", uptime))
+		L = append(L, GaugeValue("nginx.uptime", uptime))
 	}
 
 	respbody, resp_code, err := httpGet(url)
@@ -151,12 +151,12 @@ func NginxMetrics() (L []*model.MetricValue) {
 		log.Println(err)
 		return
 	}
-	L = append(L, GaugeValue("Nginx.ActiveConn", stat.ActiveConn))
-	L = append(L, CounterValue("Nginx.ServerAccepts", stat.ServerAccepts))
-	L = append(L, CounterValue("Nginx.ServerHandled", stat.ServerHandled))
-	L = append(L, CounterValue("Nginx.ServerRequests", stat.ServerRequests))
-	L = append(L, GaugeValue("Nginx.ServerReading", stat.ServerReading))
-	L = append(L, GaugeValue("Nginx.ServerWaiting", stat.ServerWaiting))
-	L = append(L, GaugeValue("Nginx.ServerWriting", stat.ServerWriting))
+	L = append(L, GaugeValue("nginx.active_conn", stat.ActiveConn))
+	L = append(L, CounterValue("nginx.server_accepts", stat.ServerAccepts))
+	L = append(L, CounterValue("nginx.server_handled", stat.ServerHandled))
+	L = append(L, CounterValue("nginx.server_requests", stat.ServerRequests))
+	L = append(L, GaugeValue("nginx.server_reading", stat.ServerReading))
+	L = append(L, GaugeValue("nginx.server_waiting", stat.ServerWaiting))
+	L = append(L, GaugeValue("nginx.server_writing", stat.ServerWriting))
 	return
 }

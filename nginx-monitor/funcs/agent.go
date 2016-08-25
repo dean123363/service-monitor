@@ -5,5 +5,5 @@ import (
 )
 
 func AgentMetrics() []*model.MetricValue {
-	return []*model.MetricValue{GaugeValue("Ngnix.Monitor.alive", 1)}
+	return []*model.MetricValue{GaugeValue("ngnix.monitor.alive", 1)}
 }
