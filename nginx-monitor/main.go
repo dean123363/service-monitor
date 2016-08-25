@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/51idc/service-monitor/nginx-monitor/cron"
-	"github.com/51idc/service-monitor/nginx-monitor/funcs"
-	"github.com/51idc/service-monitor/nginx-monitor/g"
-	"github.com/51idc/service-monitor/nginx-monitor/http"
+	"github.com/dean123363/service-monitor/nginx-monitor/cron"
+	"github.com/dean123363/service-monitor/nginx-monitor/funcs"
+	"github.com/dean123363/service-monitor/nginx-monitor/g"
+	"github.com/dean123363/service-monitor/nginx-monitor/http"
 )
 
 func main() {
